@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.phong.hotrohoctap">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/hotro"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/hotro"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.phong.hotrohoctap.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.phong.hotrohoctap.StudentActivity"
+            android:label="Khóa Học" />
+        <activity
+            android:name="com.phong.hotrohoctap.AddLayer"
+            android:label="Thêm Lớp" />
+        <activity
+            android:name="com.phong.hotrohoctap.ListClass"
+            android:label="Danh Sách Lớp" />
+        <activity
+            android:name="com.phong.hotrohoctap.AddStudent"
+            android:label="Thêm Sinh Viên" />
+        <activity
+            android:name="com.phong.hotrohoctap.News.NewsActivity"
+            android:label="Tin Tức"
+            android:parentActivityName="com.phong.hotrohoctap.News.NewsActivity" />
+        <activity
+            android:name="com.phong.hotrohoctap.News.wedview"
+            android:label="Tin Tức"
+            android:parentActivityName="com.phong.hotrohoctap.News.NewsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.phong.hotrohoctap.MapsActivity"
+            android:label="Bản Đồ" />
+        <activity
+            android:name="com.phong.hotrohoctap.SocialActivity"
+            android:label="Xã Hội" />
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter><action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.phong.hotrohoctap.Chucnangfb"
+            android:label="Facebook"></activity>
+    </application>
+
+</manifest>
